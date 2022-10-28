@@ -2,7 +2,7 @@ from django.shortcuts import render
 from viajes.models import Reserva
 from viajes.forms import Buscar
 from django.views import View
-from viajes.forms import Buscar, ReservaForm
+from viajes.forms import Buscar, ReservaForm, PaqueteForm
 
 def mostrar_reserva(request):
   lista_reservas = Reserva.objects.all()
@@ -43,6 +43,27 @@ class AltaReserva(View):
         if form.is_valid():
             form.save()
             msg_exito = f"se cargo con éxito la reserva de {form.cleaned_data.get('nombre')}"
+            form = self.form_class(initial=self.initial)
+            return render(request, self.template_name, {'form':form, 
+                                                            'msg_exito': msg_exito})
+            
+        return render(request, self.template_name, {"form": form})
+
+class AltaPaquete(View):
+    
+    form_class = PaqueteForm
+    template_name = 'viajes/alta_paquete.html'
+    initial = {"destino":"", "fecha_ida":"", "fecha_vuelta":""}
+
+    def get(self, request):
+        form = self.form_class(initial=self.initial)
+        return render(request, self.template_name, {'form':form})
+
+    def post(self, request):
+        form = self.form_class(request.POST)
+        if form.is_valid():
+            form.save()
+            msg_exito = f"se ha agregado al carrito su paquete turistico a {form.cleaned_data.get('destino')}"
             form = self.form_class(initial=self.initial)
             return render(request, self.template_name, {'form':form, 
                                                             'msg_exito': msg_exito})
