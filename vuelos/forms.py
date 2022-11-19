@@ -3,7 +3,7 @@ from bootstrap_datepicker_plus.widgets import DatePickerInput, TimePickerInput, 
 from vuelos.models import Vuelos
 
 class Buscar(forms.Form):
-    destino = forms.CharField(max_length=100)
+    nombre_pasajero = forms.CharField(max_length=100)
 
 class VueloForm(forms.ModelForm):
     class Meta:
@@ -11,4 +11,5 @@ class VueloForm(forms.ModelForm):
         fields = ['nombre_pasajero', 'destino' , 'fecha_vuelo_ida' , 'fecha_vuelo_vuelta', 'id']
         widgets = {
             'fecha_vuelo_ida': DatePickerInput(format='%d-%m-%y'),
-            'fecha_vuelo_vuelta': DatePickerInput(format='%d-%m-%y'),}
+            'fecha_vuelo_vuelta': DatePickerInput(format='%d-%m-%y'),
+        }

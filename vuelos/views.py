@@ -22,7 +22,7 @@ class BuscarVuelo(View):
         form = self.form_class(request.POST)
         if form.is_valid():
             nombre_pasajero = form.cleaned_data.get("nombre_pasajero")
-            lista_vuelos = Vuelos.objects.filter(destino__icontains=nombre_pasajero).all() 
+            lista_vuelos = Vuelos.objects.filter(nombre_pasajero__icontains=nombre_pasajero).all() 
             form = self.form_class(initial=self.initial)
             return render(request, self.template_name, {'form':form, 
                                                         'lista_vuelos':lista_vuelos})
