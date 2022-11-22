@@ -68,3 +68,7 @@ ir a localhost:8000/
 para acceder a la app.
 
 Si todo sale bien, deberías ser capaz de abrir el navegador y ver la aplicación funcionando.
+
+## link al video
+
+https://youtu.be/n2KMc-3PZwE
