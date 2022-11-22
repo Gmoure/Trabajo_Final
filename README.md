@@ -30,8 +30,12 @@ para instalar las dependencias del proyecto, primero debes correr el comando `pi
 ```bash
 > pip install -r requirements.txt
 ```
+## Instalación de dependencias adicionales
 
-## Configurando la aplicación Django
+```bash
+pip install django-bootstar4 
+pip install django-bootstrap-datepcker-plus
+```
 
 una vez que terminas la instalación de dependencias, debes correr los siguientes comandos de Django:
 
@@ -45,12 +49,6 @@ una vez que terminas la instalación de dependencias, debes correr los siguiente
 windows:
 ```bash
 c:\> py manage.py migrate
-```
-## Instalación de dependencias adicionales
-
-```bash
-pip install django-bootstar4 
-pip install django-bootstrap-datepcker-plus
 ```
 
 ### Correr el servidor de pruebas
@@ -70,6 +68,3 @@ ir a localhost:8000/
 para acceder a la app.
 
 Si todo sale bien, deberías ser capaz de abrir el navegador y ver la aplicación funcionando.
-
-### Link al video
-
