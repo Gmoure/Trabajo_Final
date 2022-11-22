@@ -16,7 +16,7 @@ Como chequear mi versión de python:
 > python 3.8.0
 ```
 
-whindows:
+windows:
 
 ```bash
 c:\> py --version
