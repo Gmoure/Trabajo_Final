@@ -14,7 +14,7 @@ in *nix systems:
 ```bash
 > python --version
 > python 3.8.0
-```bash
+```
 
 in whindows
 
