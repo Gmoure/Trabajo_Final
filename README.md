@@ -63,7 +63,7 @@ windows:
 c:\> py manage.py runserver
 ```
 
-ir a localhost:8000/
+ir a localhost:8000/blog-opiniones
 
 para acceder a la app.
 
