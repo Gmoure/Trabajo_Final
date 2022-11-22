@@ -9,14 +9,14 @@ Este proyecto se realizó con Python 3.8. Se recomienda utilizar esta versión o
 
 Como chequear mi versión de python:
 
-in *nix systems:
+*nix:
 
 ```bash
 > python --version
 > python 3.8.0
 ```
 
-in whindows
+whindows:
 
 ```bash
 c:\> py --version
