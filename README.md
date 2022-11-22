@@ -21,7 +21,7 @@ in whindows
 ```bash
 c:\> py --version
 c:\> python 3.8.0
-```bash
+```
 
 ## instalar dependencias
 
